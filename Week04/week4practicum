@@ -1,0 +1,240 @@
+
+#include <iostream>
+
+int main()
+{
+
+	//Task 1 
+	std::cout << "Task1\n";
+	std::cout << "Enter a natural number to calculate its factorial: \n";
+
+	int n;
+	std::cin >> n;
+	 if (n > 0) {
+	int fact = 1;
+	for (int i = 1; i <= n;i++) { //i e broqchut na cikula
+	    fact = fact * i;
+	}
+	std::cout << fact <<"\n";
+	 }
+	 else{
+	     std::cout << "The number is not natural\n";
+	 }
+
+	//Task 2 
+	std::cout << "Task2\n";
+	std::cout << "Enter numbers: \n";
+    int num;
+    std::cin >> num;
+	int evenCounter = 0; //broqch za posledovatelni chetni chisla
+    while (evenCounter < 3) { //0 1 ili 2
+        if (num % 2 == 0) {
+            evenCounter++;
+            continue;
+        }
+        else {
+            evenCounter = 0;
+        }
+    }
+    std::cout << "You entered 3 even numbers in a row\n";
+
+
+	//Task 3 
+	std::cout << "Task3\n";
+	std::cout << "Enter a natural number to check if it's prime:\n";
+    int number;
+    bool isPrime = true;
+    std::cin >> number;
+    for (int j = 2;j < number;j++) {
+        if (number % j == 0) {
+            isPrime = false;
+            break;
+        }
+        if (isPrime) {
+            std::cout << "true\n";
+
+        }
+        else {
+			std::cout << "false\n";
+        }
+    }
+
+	//Task4
+    std::cout << "Task4\n";
+    std::cout << "Enter a number to calculate its Fibonacci number:\n";
+   
+    int m, x = 0, y = 1, sum;
+    std::cin >> m;
+    for (int p = 1;p < m;p++) {
+       sum = x + y;
+      x = y;
+      y = sum;
+   }
+	std::cout << sum << "\n";
+
+
+
+	//Task5
+	std::cout << "Task5\n";
+	std::cout << "Enter a natural number:\n";
+
+	    int num1, sumOfDigits = 0;
+	    std::cin >> num1;
+	    while (num1 > 0) {
+	        int lastDigit = num1 % 10;
+	        num1 = num1 / 10;
+	        sumOfDigits = sumOfDigits + lastDigit;
+
+	    }
+	    std::cout << sumOfDigits << "\n";
+	    if (num1 <= 0) {
+	        std::cout<< "The number is not natural\n";
+	    }
+
+
+
+
+	//Task 6
+	std::cout << "Task6\n";
+	std::cout << "Enter a natural number to count its digits:\n";
+	int num2, digitCounter = 0;
+	std::cin >> num2;
+	while (num2 > 0) {
+	    int lastDigit1 = num2 % 10;
+	    num2 = num2 / 10;
+	   
+	    digitCounter++;
+	    
+	}
+	std::cout << digitCounter << "\n";
+
+
+ //task7
+
+	std::cout << "Task7\n";
+	std::cout << "Enter a natural number:\n";
+	int num3;
+	std::cin >> num3;
+	for (int j = 1;j < num3;j++) {
+	
+		for (int g = 1;g <= j;g++) {
+
+			std::cout << g << " " ;
+
+		}
+		std::cout << "\n";
+	}
+
+	for (int k = num3;k >= 1;k--) {
+		
+		for (int l = 1;l <= k;l++) {
+			std::cout << l << " ";
+
+		}
+		std::cout<< "\n";
+
+	}
+
+
+
+	//Task 8
+std::cout << "Task8 : \n";
+for (int num4 = 1000; num4 <= 9999; num4++) {
+
+	int ost1 = num4 / 1000;
+	int ost2 = (num4 / 100) % 10;
+	int ost3 = (num4 / 10) % 10;
+	int ost4 = num4 % 10;
+
+	if (ost1 % 2 == 1 && ost3 % 2 == 1 && ost1 + ost2 == ost4) {
+		std::cout << ost1 << ost2 << ost3 << ost4 << "\n";
+	}
+
+}
+
+
+
+
+
+// Task 9 
+std::cout << "Task9 : \n";
+std::cout << "Enter a natural number:\n";
+int num5;
+std::cin >> num5;
+for (unsigned int f = 1;f <= num5; f++) {
+	if (num5 % f == 0) {
+		std::cout << f << " " << num5 / f << "\n";
+	}
+}
+
+
+
+//Task 10 
+std::cout << "Task10 : \n";
+std::cout << "Enter a positive integer\n";
+int num6, result = 0, last;
+std::cin >> num6;
+bool evenPosition = true;
+while (true) {
+	if (last = num6) {
+		break;
+	}
+	if (num6 % 5 == 0) {
+		continue;
+	}
+	if (evenPosition) {
+		result = result + num6;
+	}
+	evenPosition = !evenPosition;
+	last = num6;
+
+}
+std::cout << result << "\n";
+
+
+
+
+
+//Task 11
+std::cout << "Task11 : \n";
+std::cout << "Enter a positive number:\n";
+int num7, min=INT_MIN, max=INT_MAX;
+std::cin >> num7;
+for (int x = 1;x <= num7; x++) {
+	int currentNum;
+	std::cin >> currentNum;
+	
+    if (min > currentNum){
+		min = currentNum;
+	}
+
+	if (max > currentNum) {
+		max = currentNum;
+	}
+
+
+	}
+std::cout << min << " " << max;
+
+
+
+
+//BONUS
+int i = 9;
+while (i >= 0) {
+	std::cout << ++i <<std::endl;
+	i -= 2;//vuv for shte se izpulni v tozi red
+}
+
+
+
+
+
+
+}
+
+
+
+
+
+
